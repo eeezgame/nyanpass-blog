@@ -6,7 +6,10 @@
   "author": "Runki",
   "license": "MIT",
   "scripts": {
-    "docs:dev":"npx vitepress",
-    "docs:build":"npx vitepress build"
+    "docs:dev": "vitepress",
+    "docs:build": "vitepress build"
+  },
+  "devDependencies": {
+    "vitepress": "^0.5.0"
   }
 }
