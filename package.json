@@ -1,0 +1,12 @@
+{
+  "name": "nyanpass",
+  "version": "1.0.0",
+  "description": "nyanpass~~ vitepress learning",
+  "main": "index.js",
+  "author": "Runki",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev":"npx vitepress",
+    "docs:build":"npx vitepress build"
+  }
+}
