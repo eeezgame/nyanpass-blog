@@ -1,12 +1,34 @@
----
-home: true
-heroImage: /mps.png
-heroAlt: Logo image
-heroText: ZRQ30
-tagline: 一枚小前端的Vue学习日志
-actionText: 阅读
-actionLink: /note/base/
-footer: MIT Licensed | Copyright © 2021-present Runki
-date: 2020-11-15
+# Nyanpass-Blog
 
----
+喵帕斯博客记录我的前端学习日志
+
+## Project setup
+
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+
+```
+docs:dev
+```
+
+or
+
+```
+nyanpass:dev
+```
+
+### Compiles and minifies for production
+
+```
+yarn build
+```
+
+or
+
+```
+nyanpass:build
+```
+
