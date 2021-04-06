@@ -15,7 +15,7 @@ if (root) {
 if (!command || command === 'dev') {
   const port = argv.port || 3000
   require('vitepress/dist/node')
-    .createServer(argv)
+    .createServer(root,argv)
     .then((server) => {
       server.listen(port, () => {
         console.log(`listening at http://localhost:${port}`)
@@ -26,7 +26,7 @@ if (!command || command === 'dev') {
     })
 } else if (command === 'build') {
   require('vitepress/dist/node')
-    .build(argv)
+    .build(root,argv)
     .catch((err) => {
       console.error(chalk.red(`build error:\n`), err)
     })

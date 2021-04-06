@@ -8,10 +8,14 @@
   "scripts": {
     "docs:dev": "vitepress",
     "docs:build": "vitepress build",
-    "nyanpass:dev":"node build/index.js",
-    "nyanpass:build":"node build/index.js build"
+    "nyanpass:dev": "node build/index.js",
+    "nyanpass:build": "node build/index.js build"
   },
   "devDependencies": {
-    "vitepress": "^0.5.0"
-  }
+    "globby": "^11.0.3",
+    "gray-matter": "^4.0.2",
+    "mz": "^2.7.0",
+    "vitepress": "^0.12.2"
+  },
+  "dependencies": {}
 }
