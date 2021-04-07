@@ -4,7 +4,7 @@ const getPages = require('./utils/pages');
 async function getConfig(){
     const config = {
         base,
-        title: '喵帕斯',
+        title: 'ZRQ30之喵帕斯博客',
         themeConfig:{
             logo:'/mps.png',
             nav:[
