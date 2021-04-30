@@ -1,0 +1,1 @@
+import{o as a,c as e,a as t,b as r}from"./app.dbd2c2fe.js";const d='{"title":"喵~","description":"","frontmatter":{},"relativePath":"nyan.md","lastUpdated":1619745176694}',n={},i=t("h1",{id:"喵"},[t("a",{class:"header-anchor",href:"#喵","aria-hidden":"true"},"#"),r(" 喵~")],-1);n.render=function(t,r,d,n,o,s){return a(),e("div",null,[i])};export default n;export{d as __pageData};

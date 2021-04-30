@@ -1,0 +1,1 @@
+import{r as t,o as e,c as r,a}from"./app.dbd2c2fe.js";const o='{"title":"","description":"","frontmatter":{},"relativePath":"docs.md","lastUpdated":1619745176687}',s={};s.render=function(o,s,d,n,c,i){const p=t("Docs",!0);return e(),r("div",null,[a(p)])};export default s;export{o as __pageData};

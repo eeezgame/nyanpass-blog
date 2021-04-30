@@ -1,0 +1,1 @@
+import{o as a,c as e,a as t,b as r}from"./app.dbd2c2fe.js";const d='{"title":"斯~","description":"","frontmatter":{},"relativePath":"ss.md","lastUpdated":1619745176700}',s={},i=t("h1",{id:"斯"},[t("a",{class:"header-anchor",href:"#斯","aria-hidden":"true"},"#"),r(" 斯~")],-1);s.render=function(t,r,d,s,n,o){return a(),e("div",null,[i])};export default s;export{d as __pageData};

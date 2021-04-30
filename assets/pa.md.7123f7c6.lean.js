@@ -1,0 +1,1 @@
+import{o as a,c as e,a as t,b as r}from"./app.dbd2c2fe.js";const d='{"title":"帕~","description":"","frontmatter":{},"relativePath":"pa.md","lastUpdated":1619745176695}',i={},n=t("h1",{id:"帕"},[t("a",{class:"header-anchor",href:"#帕","aria-hidden":"true"},"#"),r(" 帕~")],-1);i.render=function(t,r,d,i,o,s){return a(),e("div",null,[n])};export default i;export{d as __pageData};

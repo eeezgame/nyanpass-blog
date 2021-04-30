@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      记录创建新的React应用的方式 | ZRQ30之喵帕斯博客
+    </title>
+    <meta name="description" content="A VitePress site">
+    <link rel="stylesheet" href="/nyanpass-blog/assets/style.ed7e709c.css">
+    <link rel="modulepreload" href="/nyanpass-blog/assets/Home.9711dcd4.js">
+    <link rel="modulepreload" href="/nyanpass-blog/assets/app.dbd2c2fe.js">
+    <link rel="modulepreload" href="/nyanpass-blog/assets/note_create-a-new-react-app.md.4e7f8f13.lean.js">
+    <link rel="modulepreload" href="/nyanpass-blog/assets/app.dbd2c2fe.js">
+    
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="no-sidebar theme"><header class="nav-bar" data-v-c0a2c60c><div class="sidebar-button" data-v-c0a2c60c><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/nyanpass-blog/" aria-label="ZRQ30之喵帕斯博客, back to home" data-v-c0a2c60c data-v-7a4ac696><img class="logo" src="/nyanpass-blog/mps.png" alt="Logo" data-v-7a4ac696> ZRQ30之喵帕斯博客</a><div class="flex-grow" data-v-c0a2c60c></div><div class="nav" data-v-c0a2c60c><nav class="nav-links" data-v-c0a2c60c data-v-f73db414><!--[--><div class="item" data-v-f73db414><div class="nav-link" data-v-f73db414 data-v-3f935ff0><a class="item" href="/nyanpass-blog/nyan" data-v-3f935ff0>喵 <!----></a></div></div><div class="item" data-v-f73db414><div class="nav-link" data-v-f73db414 data-v-3f935ff0><a class="item" href="/nyanpass-blog/pa" data-v-3f935ff0>帕 <!----></a></div></div><div class="item" data-v-f73db414><div class="nav-link" data-v-f73db414 data-v-3f935ff0><a class="item" href="/nyanpass-blog/ss" data-v-3f935ff0>斯 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-4b92f82c><nav class="nav-links nav" data-v-4b92f82c data-v-f73db414><!--[--><div class="item" data-v-f73db414><div class="nav-link" data-v-f73db414 data-v-3f935ff0><a class="item" href="/nyanpass-blog/nyan" data-v-3f935ff0>喵 <!----></a></div></div><div class="item" data-v-f73db414><div class="nav-link" data-v-f73db414 data-v-3f935ff0><a class="item" href="/nyanpass-blog/pa" data-v-3f935ff0>帕 <!----></a></div></div><div class="item" data-v-f73db414><div class="nav-link" data-v-f73db414 data-v-3f935ff0><a class="item" href="/nyanpass-blog/ss" data-v-3f935ff0>斯 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><!----><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-2b25a7d0><div class="container" data-v-2b25a7d0><!--[--><!--]--><div class="content" data-v-2b25a7d0><div data-v-2b25a7d0><h2 id="创建新的react应用"><a class="header-anchor" href="#创建新的react应用" aria-hidden="true">#</a> 创建新的React应用</h2><h3 id="cdn方式"><a class="header-anchor" href="#cdn方式" aria-hidden="true">#</a> CDN方式</h3><p><a href="https://zh-hans.reactjs.org/docs/add-react-to-a-website.html" target="_blank" rel="noopener noreferrer">案例</a></p><h3 id="工具链"><a class="header-anchor" href="#工具链" aria-hidden="true">#</a> 工具链</h3><p>Create React App</p><p>运行命令</p><div class="language-"><pre><code>npx create-react-app my-app
+cd my-app
+npm start
+</code></pre></div><p><a href="https://zh-hans.reactjs.org/docs/create-a-new-react-app.html#recommended-toolchains" target="_blank" rel="noopener noreferrer">更多</a></p><h3 id="从零开始配置工具链"><a class="header-anchor" href="#从零开始配置工具链" aria-hidden="true">#</a> 从零开始配置工具链</h3><h4 id="起步"><a class="header-anchor" href="#起步" aria-hidden="true">#</a> 起步</h4><p>运行命令</p><div class="language-"><pre><code>mkdir my-react-app
+cd my-react-app
+npm init
+</code></pre></div><p>在新的项目目录中,创建以下目录结构</p><div class="language-"><pre><code>.
++-- public
++-- src
+</code></pre></div><p>public目录负责静态资源,src目录负责核心代码</p><p>在public目录下新建index.html</p><div class="language-html"><pre><code><span class="token comment">&lt;!-- sourced from https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html --&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1, shrink-to-fit=no<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>React Starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>root<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>noscript</span><span class="token punctuation">&gt;</span></span>
+    You need to enable JavaScript to run this app.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>noscript</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>../dist/bundle.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>后面将会通过构建的React应用<code>&lt;script src=&quot;../dist/bundle.js&quot;&gt;&lt;/script&gt;</code>渲染到页面<code>&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</code>.</p><h4 id="babel"><a class="header-anchor" href="#babel" aria-hidden="true">#</a> Babel</h4><p>运行命令</p><div class="language-"><pre><code>npm install --save-dev @babel/core@7.1.0 @babel/cli@7.1.0 @babel/preset-env@7.1.0 @babel/preset-react@7.0.0
+</code></pre></div><p>在根目录下新建.babelrc文件,并输入以下内容</p><div class="language-"><pre><code>{
+  &quot;presets&quot;: [&quot;@babel/env&quot;, &quot;@babel/preset-react&quot;]
+}
+</code></pre></div><h4 id="webpack"><a class="header-anchor" href="#webpack" aria-hidden="true">#</a> Webpack</h4><p>引入Webpack,并配置一个开发环境</p><p>运行命令</p><div class="language-"><pre><code>npm install --save-dev webpack@4.19.1 webpack-cli@3.1.1 webpack-dev-server@3.1.8 style-loader@0.23.0 css-loader@1.0.0 babel-loader@8.0.2
+</code></pre></div><p>在根目录下创建文件webpack.config.js,它将会导出一个配置对象到Webpack中</p><p>webpack.config.js</p><div class="language-javascript"><pre><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;path&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;webpack&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token operator">:</span> <span class="token string">&quot;./src/index.js&quot;</span><span class="token punctuation">,</span>
+  mode<span class="token operator">:</span> <span class="token string">&quot;development&quot;</span><span class="token punctuation">,</span>
+  module<span class="token operator">:</span> <span class="token punctuation">{</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(js|jsx)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(node_modules|bower_components)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        loader<span class="token operator">:</span> <span class="token string">&quot;babel-loader&quot;</span><span class="token punctuation">,</span>
+        options<span class="token operator">:</span> <span class="token punctuation">{</span> presets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;@babel/env&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;style-loader&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;css-loader&quot;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  resolve<span class="token operator">:</span> <span class="token punctuation">{</span> extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.js&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.jsx&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;dist/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    publicPath<span class="token operator">:</span> <span class="token string">&quot;/dist/&quot;</span><span class="token punctuation">,</span>
+    filename<span class="token operator">:</span> <span class="token string">&quot;bundle.js&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
+    contentBase<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;public/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    port<span class="token operator">:</span> <span class="token number">3000</span><span class="token punctuation">,</span>
+    publicPath<span class="token operator">:</span> <span class="token string">&quot;http://localhost:3000/dist/&quot;</span><span class="token punctuation">,</span>
+    hotOnly<span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>HotModuleReplacementPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="react"><a class="header-anchor" href="#react" aria-hidden="true">#</a> React</h4><p>引入React</p><div class="language-"><pre><code>npm install react react-dom
+</code></pre></div><p>在src目录下新建index.html并输入以下内容</p><div class="language-JavaScript"><pre><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">&quot;react-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">&quot;./App.js&quot;</span><span class="token punctuation">;</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在src目录下新建App.js并输入以下内容</p><div class="language-JavaScript"><pre><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;./App.css&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span><span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;App&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span> Hello<span class="token punctuation">,</span> World<span class="token operator">!</span> <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>在src目录下新建App.css并输入以下内容</p><div class="language-"><pre><code>.App {
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</code></pre></div><p>在package.json新增以下内容</p><div class="language-"><pre><code>{
+    ...
+    &quot;scripts&quot;: {
+        &quot;start&quot;: &quot;webpack-dev-server --mode development&quot;
+    },
+    ...
+}
+</code></pre></div><p>好了,一个简易Babel7+React的配置已完成,可以开始愉快的编程了. 执行以下命令,开启服务.</p><div class="language-"><pre><code>npm run start
+</code></pre></div><h3 id="使用typescript进行开发"><a class="header-anchor" href="#使用typescript进行开发" aria-hidden="true">#</a> 使用Typescript进行开发</h3><p>采用babel7对ts,tsx进行转换,使用tsc --noEmit进行类型检查</p><h4 id="bebel"><a class="header-anchor" href="#bebel" aria-hidden="true">#</a> bebel</h4><div class="language-"><pre><code>npm install --save-dev @babel/preset-typescript @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-rest-spread 
+</code></pre></div><h4 id="typescript"><a class="header-anchor" href="#typescript" aria-hidden="true">#</a> typescript</h4><p>引入React类库的类型声明文件</p><div class="language-"><pre><code>npm install --save-dev @types/react @types/react-dom typescript
+
+</code></pre></div><p>创建tsconfig.json,并输入以下内容</p><div class="language-"><pre><code>{
+  &quot;compilerOptions&quot;: {
+    &quot;target&quot;: &quot;es2015&quot;,                      
+    &quot;module&quot;: &quot;commonjs&quot;,
+    &quot;jsx&quot;: &quot;react&quot;,
+    &quot;strict&quot;: true, 
+    &quot;esModuleInterop&quot;: true
+  },
+  &quot;include&quot;: [
+    &quot;src/**/*&quot;
+  ],
+  &quot;exclude&quot;: [
+    &quot;node_modules&quot;
+  ]
+}
+</code></pre></div><h4 id="webpack-2"><a class="header-anchor" href="#webpack-2" aria-hidden="true">#</a> webpack</h4><p>修改webpack.config.js配置</p><div class="language-"><pre><code>
+const path = require(&quot;path&quot;);
+const webpack = require(&quot;webpack&quot;);
+
+module.exports = {
+  entry: &quot;./src/index.tsx&quot;,
+  mode: &quot;development&quot;,
+  module: {
+    rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        loader: &quot;babel-loader&quot;,
+        options: { presets: [&quot;@babel/env&quot;] }
+      },
+      {
+        test: /\.css$/,
+        use: [&quot;style-loader&quot;, &quot;css-loader&quot;]
+      }
+    ]
+  },
+  resolve: { extensions: [&quot;*&quot;, &quot;.ts&quot;, &quot;.tsx&quot;, &quot;.js&quot;, &quot;.jsx&quot;] },
+  output: {
+    path: path.resolve(__dirname, &quot;dist/&quot;),
+    publicPath: &quot;/dist/&quot;,
+    filename: &quot;bundle.js&quot;
+  },
+  devServer: {
+    contentBase: path.join(__dirname, &quot;public/&quot;),
+    port: 3000,
+    publicPath: &quot;http://localhost:3000/dist/&quot;,
+    hotOnly: true
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()]
+};
+
+</code></pre></div><p>把src的.js后缀改为tsx或ts</p><p>在package.json加入类型检查脚本&#39;check&#39;</p><div class="language-"><pre><code>{
+  ...
+  &quot;scripts&quot;: {
+    ...
+    &quot;check&quot;: &quot;tsc --noEmit&quot;
+  }
+  ...
+}
+
+</code></pre></div><p>执行npm run check可以对src目录下的ts进行类型检查.</p><p>好了,一个简易Typescript+Babel7+React的配置已完成,可以开始愉快的编程了.</p></div></div><footer class="page-footer" data-v-2b25a7d0 data-v-ad063ca8><div class="edit" data-v-ad063ca8><div class="edit-link" data-v-ad063ca8 data-v-1501f284><!----></div></div><div class="updated" data-v-ad063ca8><!----></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"docs.md\":\"0369a94c\",\"getting-started.md\":\"02a5066a\",\"index.md\":\"1e2b545e\",\"nyan.md\":\"977bf629\",\"pa.md\":\"7123f7c6\",\"readme.md\":\"170e7b53\",\"ss.md\":\"2cf2147f\",\"note_create-a-new-react-app.md\":\"4e7f8f13\",\"note_v-component-keep-alive.md\":\"1ba3e27b\",\"note_web-api-observer.md\":\"7e738ea3\"}")</script>
+    <script type="module" async src="/nyanpass-blog/assets/app.dbd2c2fe.js"></script>
+  </body>
+</html>
